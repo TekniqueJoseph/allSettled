@@ -19,6 +19,7 @@ h1:hover{
     display: flex;
     justify-content: space-between;
     align-items: center;
+   
 }
 ul{
     display: flex;
@@ -35,30 +36,59 @@ li:hover{
     color: aliceblue;
     cursor: pointer;
 }
-.hero{
-    width: 90%;
-    margin: 0 auto;
-    text-align: center;
-}
-img{
-    margin-top: 50px;
-    width: 500px;
+header, div img {
+	width: 500px; 
     height: 500px;
+}
+header { 
+    overflow: hidden;
+    margin: 70px auto;
+    border-radius: 50%;
+}
+header:after {
+	content: "❚❚";
+	font-size: 150px;
+	position: absolute;
+	z-index: 12;
+	color: rgba(255,255,255, 0);
+	left: 47%; top: 15vw;
+	transition: 1s all ease-in-out;
+}
+header:hover:after {
+	color: rgba(255,255,255, 0.6);
+}
+.hero{
+    width: 3000px;
+    /* animation-name:slider; */
+	animation-duration:11s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count:infinite;
+}
+.hero:hover { animation-play-state:paused; }
+@keyframes slider {
+	0% { transform: translateX(0px); }
+	20% { transform: translateX(0px); }
+	25% { transform: translateX(-500px); }
+	45% { transform: translateX(-500px); }
+	50% { transform: translateX(-1000px); }
+	70% { transform: translateX(-1000px); }
+	75% { transform: translateX(-1500px); }
+	95% { transform: translateX(-1500px); }
+	100% { transform: translateX(2000px);  }
+}
+.hero img{
+    width: 497px;
     border-radius: 50%;
     transition: transform 1.5s ease-in-out;
 }
-img:hover {
+.hero img:hover {
     transform: rotate(720deg);
     cursor: pointer;
   }
-
-
-
 .moreinfo{
-    margin-top: 50px;
+    margin-top: 80px;
     text-align: center;
 }
-
 button{
     background: #990118;
     color: aliceblue;
@@ -67,7 +97,6 @@ button{
     border-radius: 6px;
     border: none;
 }
-
 button:hover{
     background-color: aliceblue;
     color: black;
