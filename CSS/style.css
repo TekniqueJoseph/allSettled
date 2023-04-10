@@ -6,7 +6,7 @@ body{
 }
 .container{
     display: grid;
-    grid-template-rows: 100px 600px 100px;
+    grid-template-rows: 100px 500px 100px;
 }
 h1{
     color: aliceblue;
@@ -37,12 +37,12 @@ li:hover{
     cursor: pointer;
 }
 header, div img {
-	width: 500px; 
-    height: 500px;
+	width: 400px; 
+    height: 400px;
 }
 header { 
     overflow: hidden;
-    margin: 70px auto;
+    margin: 50px auto 0;
     border-radius: 50%;
 }
 header:after {
@@ -58,8 +58,8 @@ header:hover:after {
 	color: rgba(255,255,255, 0.6);
 }
 .hero{
-    width: 3000px;
-    /* animation-name:slider; */
+    width: 2000px;
+    animation-name:slider;
 	animation-duration:11s;
 	animation-timing-function: ease-in-out;
 	animation-iteration-count:infinite;
@@ -68,16 +68,16 @@ header:hover:after {
 @keyframes slider {
 	0% { transform: translateX(0px); }
 	20% { transform: translateX(0px); }
-	25% { transform: translateX(-500px); }
-	45% { transform: translateX(-500px); }
-	50% { transform: translateX(-1000px); }
-	70% { transform: translateX(-1000px); }
-	75% { transform: translateX(-1500px); }
-	95% { transform: translateX(-1500px); }
-	100% { transform: translateX(2000px);  }
+	25% { transform: translateX(-400px); }
+	45% { transform: translateX(-400px); }
+	50% { transform: translateX(-800px); }
+	70% { transform: translateX(-800px); }
+	75% { transform: translateX(-1200px); }
+	95% { transform: translateX(-1200px); }
+	100% { transform: translateX(1600px);  }
 }
 .hero img{
-    width: 497px;
+    width: 397px;
     border-radius: 50%;
     transition: transform 1.5s ease-in-out;
 }
@@ -86,7 +86,7 @@ header:hover:after {
     cursor: pointer;
   }
 .moreinfo{
-    margin-top: 80px;
+    margin-top: 40px;
     text-align: center;
 }
 button{
